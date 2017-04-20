@@ -1,4 +1,4 @@
-1 - Launch Instance AWS Ubuntu
+﻿1 - Launch Instance AWS Ubuntu
 2 - Clonar Repositório: https://github.com/karinakuroda/RabbitmqCluster.git
 3 - Para conectar no instancia: https://docs.aws.amazon.com/console/ec2/instances/connect/putty
 4 - Instalar docker no ubuntu- https://store.docker.com/editions/community/docker-ce-server-ubuntu?tab=description
@@ -35,5 +35,9 @@ OBSERVAÇÕES:
 		sudo chmod u+x rabbitmq-cluster
 		Fazer um build depois de mudar as permissoes
 	Verificar se os arquivos estão no formato UNIX (LF)
+	git config core.autocrlf false -> para fazer commit sem alterar padrao do linux
+	Select File –> Advanced Save Options
+Change Line Endings to Unix (LF)
+	
 	P/ problemas com docker-compose sudo `which docker-compose` up -d
 	

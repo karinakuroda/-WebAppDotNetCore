@@ -1,0 +1,36 @@
+rabbitmq-server -detached
+rabbitmqctl cluster_status
+
+P/ HABILITAR http://localhost:15672/#/
+http://stackoverflow.com/questions/23500014/rabbitmq-started-but-cant-access-management-interface
+rabbitmq-plugins enable rabbitmq_management
+
+
+rabbitmqctl stop
+rabbitmq-server restart
+
+
+
+p/ trocar a porta do management:
+parar tudo, alterar e restart
+alterar a porta no listener dentro do config
+{listener, [{port, 12345}]}
+C:\Users\kmidori\AppData\Roaming\RabbitMQ\rabbitmq.config
+http://stackoverflow.com/questions/30616800/how-to-change-default-port15672-of-rabbitmq-management-plugin
+
+
+P/subir o rabbit pelo docker:
+docker run -d --hostname my-rabbit -p 5672:5672 -p 8086:15672 rabbitmq:3-management
+
+docker info
+docker images
+
+
+rabbitmqctl stop_app
+telnet localhost 5672
+rabbitmqctl join_cluster rabbit@my-rabbit
+
+
+
+git config core.autocrlf false -> para fazer commit sem alterar padrao do linux
+http://stackoverflow.com/questions/1967370/git-replacing-lf-with-crlf

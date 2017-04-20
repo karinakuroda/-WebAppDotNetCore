@@ -1,0 +1,17 @@
+DOCKER
+
+docker ps ->List containers
+
+P/ SUBIR O RABBIT:
+docker run -d --hostname my-rabbit -p 5672:5672 -p 8086:15672 rabbitmq:3-management 
+
+P/ SUBIR CLUSTER - colocar o cookie gerado
+ docker run -d --hostname my-rabbit -e RABBITMQ_ERLANG_COOKIE='UKLKHVUNUASNDJPKZXTA' -p 5672:5672 -p 8086:15672 rabbitmq:3-management 
+ docker run -d --hostname my-rabbit  -e RABBITMQ_ERLANG_COOKIE='UKLKHVUNUASNDJPKZXTA' -e RABBITMQ_NODENAME=rabbit@my-rabbit -p 5672:5672 -p 8086:15672 rabbitmq:3-management
+ 
+ 
+ docker-compose up -d
+ docker-compose logs
+ docker build . --no-cache=true
+ docker-compose down
+ docker build -t karinakuroda/rabbitmq-cluster .

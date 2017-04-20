@@ -1,0 +1,22 @@
+UBUNTU
+P/instalar o docker:
+sudo apt-get install -y docker
+Inicia o servico
+sudo service docker start
+
+http://askubuntu.com/questions/6723/change-folder-permissions-and-ownership
+
+sudo chown -R ubuntu:ubuntu RabbitMQCluster (PERMISSAO NA PASTA RabbitMQCluster P/Conseguir copiar os arquivos!)
+ls -A (para listar arq ocultos)
+
+(copia os arquivos)
+C:\> pscp -i C:\Users\kmidori\Desktop\AWS\my-key-pair.ppk C:\Sample_file.txt ubuntu@ec2-54-233-116-66.sa-east-1.compute.amazonaws.com:/usr/local/Sample_file.txt'
+
+p/rodar docker-comose
+chmod +x /usr/local/bin/docker-compose
+
+
+PERMISSAO no arquivo dockerfile
+chmod u+x Dockerfile
+ sudo chmod +x rabbitmq-cluster /usr/local/bin/ (PERMISSAO NO RabbitMQCluster que ta na pasta bin/..)
+
